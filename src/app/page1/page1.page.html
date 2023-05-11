@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="titles2">
+      The Astronomy Picture of the Day
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title id="maintitle">The Astronomy Picture of the Day </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-card *ngIf="nasaData">
+    <ion-card-header>
+      <ion-card-title>{{ nasaData.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="nasaData.url" alt="{{ nasaData.title }}" />
+      <p>{{ nasaData.explanation }}</p>
+    </ion-card-content>
+  </ion-card>
+  <div id="container"></div>
+  <ion-button routerLink="/home">Return to home page</ion-button>
+  <ion-button routerLink="/page2">Go to page 2</ion-button>
+
+</ion-content>

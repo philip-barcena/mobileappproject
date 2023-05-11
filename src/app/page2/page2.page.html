@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="titles3">
+      Latest Mars Rover Photos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="photos.length">
+    <div class="container">
+      <img *ngIf="photos[currentPhotoIndex]" [src]="photos[currentPhotoIndex].img_src" alt="Mars Rover Photo" (load)="onImageLoad($event)">
+      <ion-button (click)="nextPhoto()">Next</ion-button>
+      <ion-button routerLink="/home">Return to home page</ion-button>
+      <ion-button routerLink="/page3">Go to page 3</ion-button>
+    </div>
+  </div>
+  <div *ngIf="!photos.length">
+    <p>Loading...</p>
+  </div>
+</ion-content>

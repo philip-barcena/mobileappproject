@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title id="titles">
+      Mobile Application Project 2nd Year
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,11 +9,13 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Mobile Application Project</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
  <h3>Welcome to Mobile Apps Starter project 2023</h3>
+ <ion-button routerLink="/page1">Go to Page 1</ion-button>
+ <ion-button (click)="openBrowser()">Plugin Browser</ion-button>
   </div>
 </ion-content>
